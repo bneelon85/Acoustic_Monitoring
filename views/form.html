@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid">
+    <form id="info-form">
+        <div class="row">
+            <div class="col-4 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Well Information</h5>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" class="form-control" id="companyName" placeholder="Company Name">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="wellName">Well Name</label>
+                                <input type="text" class="form-control" id="wellName" placeholder="Well Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="location">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="Location">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="ocsg">OCS_G</label>
+                                <input type="text" class="form-control" id="ocsg" placeholder="OCS_G">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Well Stats</h5>
+                        <!--  <form> -->
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="kbMSL">KB-MSL(ft)</label>
+                                <input type="number" class="form-control" id="kbMSL" placeholder="KB-MSL(ft)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="kbTHF">KB-THF(ft)</label>
+                                <input type="number" class="form-control" id="kbTHF" placeholder="KB-THF(ft)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="perfMDmin">Perf MD Min(ft)</label>
+                                <input type="number" class="form-control" id="perfMDmin" placeholder="Perf MD Min(ft)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="perfMDmax">Perf MD Max(ft)</label>
+                                <input type="number" class="form-control" id="perfMDmax" placeholder="Perf MD Max(ft)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="perfTVDmin">Perf TVD Min(ft)</label>
+                                <input type="number" class="form-control" id="perfTVDmin" placeholder="Perf TVD Min(ft)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="perfTVDmax">Perf TVD Max(ft)</label>
+                                <input type="number" class="form-control" id="perfTVDmax" placeholder="Perf TVD Max(ft)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="bhp">Bottom Hole(psi)</label>
+                                <input type="number" class="form-control" id="bhp" placeholder="Bottom Hole(psi)">
+                            </div>
+                            <div class="form-group col-3">
+                                <label for="acVelo">Acoustic Velocity(ft/s)</label>
+                                <input type="number" class="form-control" id="acVelo" placeholder="Acoustic Velo(ft/s)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-3 mt-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Upload Deviation Survey</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Example file input</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 mt-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Shot Statistics</h5>
+                    <form id="shot-form">
+                        <div class="form-row">
+                            <div class="form-group col-3">
+                                <label for="dateTime">Date Time</label>
+                                <input type="datetime-local" class="form-control form-control-sm" id="dateTime" step="1">
+                            </div>
+                            <div class="form-group col">
+                                <label for="acqPoint">Acq. Point</label>
+                                <select class="form-control form-control-sm" id="acqPoint">
+                                    <option>Annulus</option>
+                                    <option>Casing</option>
+                                    <option>Tubing</option>
+                                </select>
+                            </div>
+                            <div class="form-group col">
+                                <label for="acTrvl">Ac. Travel(s)</label>
+                                <input type="number" step="any" class="form-control form-control-sm" id="acTrvl" placeholder="Acoustic Travel(s)">
+                            </div>
+                            <div class="form-group col">
+                                <label for="surfPress">Surface(psi)</label>
+                                <input type="number" step="any" class="form-control form-control-sm" id="surfPress" placeholder="Surface(psi)">
+                            </div>
+                            <div class="form-group col">
+                                <label for="fluidDensity">Fluid Density</label>
+                                <input type="number" step="any" class="form-control form-control-sm" id="fluidDensity" placeholder="Fluid Density">
+                            </div>
+                            <div class="form-group col">
+                                <label for="comments">Comments</label>
+                                <input type="text" class="form-control form-control-sm" id="comments" placeholder="Comments">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
